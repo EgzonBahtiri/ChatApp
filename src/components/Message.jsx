@@ -9,10 +9,10 @@ const style = {
 };
 
 const Message = ({ message }) => {
-  const { uid, displayName } = auth.currentUser;
-
   const messageClass =
-    message.uid === uid ? `${style.sent}` : `${style.received}`;
+    message.uid === auth.currentUser.uid
+      ? `${style.sent}`
+      : `${style.received}`;
   //console.log(auth.currentUser);
 
   return (
