@@ -8,6 +8,10 @@ This repository hosts a professional chat application developed using React and 
 - Effortless initiation of conversations.
 - Streamlined user interface for a smooth chat experience.
 
+
+<img width="1235" alt="Screenshot 2023-06-14 at 2 51 13 AM" src="https://github.com/EgzonBahtiri/ChatApp/assets/25590360/cb362312-98f9-4437-8395-90f026bc2beb">
+
+
 ## Future Enhancements
 
 In subsequent versions of the application, the following features are planned to be incorporated:
@@ -30,10 +34,6 @@ To run this chat application locally, please follow these steps:
 npm install
 ```
 
-4. Configure your Firebase project by creating a new project and obtaining the required credentials.
-5. Update the Firebase configuration in the application code with your own credentials.
-6. Launch the application by running the following command:
-
 ```bash
 npm start
 ```
@@ -50,5 +50,4 @@ Contributions to this chat application are welcome. If you encounter any issues 
 We would like to express our gratitude to the creators of React and Firebase for providing the tools and technologies that made this application possible.
 
 
-<img width="1235" alt="Screenshot 2023-06-14 at 2 51 13 AM" src="https://github.com/EgzonBahtiri/ChatApp/assets/25590360/cb362312-98f9-4437-8395-90f026bc2beb">
 
