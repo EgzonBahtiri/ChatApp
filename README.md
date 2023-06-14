@@ -47,7 +47,7 @@ Contributions to this chat application are welcome. If you encounter any issues 
 
 ## Acknowledgements
 
-We would like to express our gratitude to the creators of React and Firebase for providing the tools and technologies that made this application possible.
+I would like to express gratitude to the creators of React and Firebase for providing the tools and technologies that made this application possible.
 
 
 
