@@ -3,13 +3,18 @@ import React, { useState, useEffect, useRef } from "react";
 import { db } from "../firebase";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../firebase";
+import SignIn from "./SignIn";
+import LogOut from "./LogOut";
 
 const style = {
-  main: `flex flex-col p-[10px] relative`,
+  main: `flex flex-col relative ml-48 mr-48 border h-screen`,
 };
 
 const Chat = () => {
   const [messages, setMessages] = useState([]);
+  const [user] = useAuthState(auth);
   const scroll = useRef();
   console.log(messages);
 
@@ -23,19 +28,26 @@ const Chat = () => {
       setMessages(message);
     });
     return () => unsubscribe();
+    console.log(messages);
   }, []);
+
+  useEffect(() => {
+    if (scroll.current) {
+      scroll.current.scrollIntoView({ behavior: "auto" });
+    }
+  }, [messages]);
 
   return (
     <>
       <main className={style.main}>
-        {}
+        {user ? <LogOut /> : <SignIn />}
         {messages &&
           messages.map((message) => (
             <Message key={message.id} message={message} />
           ))}
+        <SendMessage scroll={scroll} />
+        <span ref={scroll}></span>
       </main>
-      <SendMessage scroll={scroll} />
-      <span ref={scroll}></span>
     </>
   );
 };

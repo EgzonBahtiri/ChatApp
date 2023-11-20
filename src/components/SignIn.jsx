@@ -10,12 +10,13 @@ const style = {
 const googleSignIn = () => {
   const provider = new GoogleAuthProvider();
   signInWithRedirect(auth, provider);
+  console.log("Hi there");
 };
 
 const SignIn = () => {
   return (
     <div className={style.wrapper}>
-      <GoogleButton onClick={googleSignIn} />
+      <GoogleButton onClick={googleSignIn} type="light" />
     </div>
   );
 };

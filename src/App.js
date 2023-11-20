@@ -4,10 +4,11 @@ import Navbar from "./components/Navbar";
 import { auth } from "./firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import Chat from "./components/Chat";
+import Intro from "./components/Intro";
 
 const style = {
-  appContainer: `max-w-[728px] mx-auto  text-center`,
-  sectionContainer: `flex flex-col h-[90vh] bg-red mt-10 shadow-xl border relative`,
+  appContainer: `max-w-[1920px] mx-auto  text-center`,
+  sectionContainer: `flex flex-col h-[90vh] mt-10 border relative`,
 };
 
 function App() {
@@ -15,11 +16,8 @@ function App() {
   //console.log(user);
 
   return (
-    <div className={style.appContainer}>
-      <section className={style.sectionContainer}>
-        <Navbar />
-        {user ? <Chat /> : <h1>Please Log in</h1>}
-      </section>
+    <div>
+      <section>{user ? <Chat /> : <Intro />}</section>
     </div>
   );
 }
