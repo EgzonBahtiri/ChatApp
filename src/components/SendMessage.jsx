@@ -25,6 +25,7 @@ const SendMessage = ({ scroll }) => {
       timestamp: serverTimestamp(),
     });
     setInput("");
+    console.log("Hi");
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
 
